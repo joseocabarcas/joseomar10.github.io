@@ -1,0 +1,133 @@
+*, :after, :before {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+header.header {
+  background-color: #000051;
+  color: #ff1400;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  .brand {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a {
+    padding: 10px;
+    color: #ff1400;
+    outline: none;
+    text-decoration: none
+  }
+  nav {
+    flex: 1;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin: 0 5px;
+        a {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.home {
+  background-color: #000051;
+  color: #ff1400;
+  height: calc(100vh - 70px);
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div {
+    flex: 1 1 50%;
+  }
+  .information {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .description {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .container-social {
+      display: flex;
+      .hireme {
+        background-color: #ff1400;
+        color: white;
+        font-size: 18px;
+        border-radius: 40px;
+        padding: 10px;
+        border: none;
+        font-weight: 500;
+        margin: 0 10px;
+        outline: none;
+      }
+      .container-icons {
+        display: flex;
+        a {
+          background-color: #ffffff;
+          border-radius: 20px;
+          padding: 6px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 2px;
+        }
+        .ic {
+          height: 28px;
+          width: 28px;
+          background-repeat: no-repeat;
+          display: block;
+          &-fc {
+            background-image: url("/images/icons/ic_facebook.svg");
+          }
+          &-in {
+            background-image: url("/images/icons/ic_instagram.svg");
+          }
+          &-tw {
+            background-image: url("/images/icons/ic_twitter.svg");
+          }
+          &-ln {
+            background-image: url("/images/icons/ic_linkedin.svg");
+          }
+        }
+      }
+    }
+  }
+  .multimedia {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .profile {
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        max-height: 280px;
+      }
+    }
+  }
+}
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  .home {
+    flex-direction: column;
+  }
+}

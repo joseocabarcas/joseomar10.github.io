@@ -5,7 +5,7 @@ const Index = () => {
     <main>
       <Navbar />
       <section className="home" id="home">
-        <div>
+        <div className="information">
           <span className="subtitle">Hello, I am</span>
           <h1 className="title">José Cabarcas</h1>
           <p className="description">I'm FrontEnd Developer and FullStack Javascript Developer</p>
@@ -27,8 +27,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div>
-          <img alt="Profile" src="" />
+        <div className="multimedia">
+          <div className="profile">
+            <img alt="Profile" src="/images/profile.jpg" />
+          </div>
         </div>
       </section>
     </main>
