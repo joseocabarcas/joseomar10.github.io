@@ -3,6 +3,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 header.header {
   background-color: #000051;
   color: #ff1400;
@@ -12,8 +20,18 @@ header.header {
   align-items: center;
   padding: 10px 25px;
   .brand {
-    font-size: 20px;
-    font-weight: bold;
+    .menu {
+      display: none;
+      svg {
+        color: #ff1400;
+        height: 2.5em;
+        width: 2.5em;
+      }
+    }
+    .brand-logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
   }
   a {
     padding: 10px;
@@ -47,6 +65,7 @@ header.header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   > div {
     flex: 1 1 50%;
   }
@@ -129,5 +148,31 @@ $breakpoint-tablet: 768px;
 @media (max-width: $breakpoint-tablet) {
   .home {
     flex-direction: column;
+  }
+}
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  header.header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 15px;
+    .brand {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .menu {
+        display: block;
+      }
+    }
+    nav {
+      ul {
+        flex-direction: column;
+        li {
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
 }
