@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Navbar = () => {
   const list = ['Home', 'About', 'Tech', 'Portfolio']
 
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleMenuResponsive = () => {
     setIsOpen(!isOpen)
@@ -19,7 +19,7 @@ const Navbar = () => {
           <button
             onClick={handleMenuResponsive}
             type="button"
-            className="block text-gray-500 focus:outline-none"
+            className="block"
           >
             <svg className="" viewBox="0 0 24 24">
               {isOpen && (

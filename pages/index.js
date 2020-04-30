@@ -1,8 +1,14 @@
+import Head from 'next/head'
+
 import { Navbar } from '../components/Navbar'
 
 const Index = () => {
   return (
     <main>
+      <Head>
+        <title>José Cabarcas - FrontEnd Developer</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Navbar />
       <section className="home" id="home">
         <div className="information">
